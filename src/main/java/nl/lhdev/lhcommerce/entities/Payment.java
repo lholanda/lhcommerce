@@ -22,6 +22,7 @@ public class Payment {
     @Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
     private Instant moment;
 
+    // primeiro coloca @MapsId do lado do Payment pois - Payment depende de Order
     @OneToOne
     @MapsId
     private Order order;

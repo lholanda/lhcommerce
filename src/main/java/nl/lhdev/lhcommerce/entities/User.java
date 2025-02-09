@@ -88,6 +88,7 @@ public class User {
         this.password = password;
     }
 
+    // so o getter - nao faz set de colecao - nao tem set de LIST
     public List<Order> getOrders() {
         return orders;
     }

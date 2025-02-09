@@ -56,6 +56,13 @@ Nosso e-commerce atende diferentes perfis de consumidores e vendedores:
    ./gradlew bootRun
    ```
 
+
+### Repositorio remoto
+
+git remote add origin git@github.com:lholanda/lhcommerce.git
+git branch -M main
+git push -u origin main
+
 ## Endpoints
 
 Os endpoints disponíveis estão documentados via Swagger. Acesse:

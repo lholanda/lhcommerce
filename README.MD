@@ -1,4 +1,4 @@
-# Sistema LHCommerce
+# Projeto lhCommerce
 
 O objetivo deste projeto é implementar uma solução robusta inovadora que transforma a experiência de compra e venda de produtos elétricos, eletrônicos e artigos residenciais em geral. Nosso sistema foi desenvolvido para oferecer uma experiência de compra simples, segura e eficiente, atendendo desde quem busca tecnologia até quem deseja renovar o lar com utensílios e acessórios de qualidade.
 

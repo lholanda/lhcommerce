@@ -30,7 +30,18 @@ Nosso e-commerce atende diferentes perfis de consumidores e vendedores:
 - 
 - 
 
+## S3
+https://chatgpt.com/canvas/shared/67acf591fc748191ab0028e3ed0d3016
+
+
 <Desenho do modelo>
+
+## Relacionamentos entre Entidades 
+
+## API REST
+
+## Arquitetura em Camada
+
 
 ## Cursos da Formação sugeridos:
 

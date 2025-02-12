@@ -1,0 +1,15 @@
+###
+GET http://localhost:8080/products
+
+// http GET :8080/products
+
+###
+POST http://localhost:8080/products
+Content-Type:  application/json
+
+{
+  "email": "funcionario_1@email.com",
+  "senha": "123456"
+}
+
+// COM O HTTPIE -> http POST :4000/auth/login

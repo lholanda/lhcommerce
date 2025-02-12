@@ -34,3 +34,4 @@ build/
 
 ### temp file for studies ###
 .temp.MD
+!**/src/main/resources/http/

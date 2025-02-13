@@ -1,5 +1,5 @@
 ###
-GET http://localhost:8080/products
+GET http://localhost:8080/products/6
 
 // http GET :8080/products
 

@@ -1,28 +1,24 @@
 package nl.lhdev.lhcommerce.controllers;
 
-import java.util.Optional;
-
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import nl.lhdev.lhcommerce.entities.Product;
-import nl.lhdev.lhcommerce.repositories.ProductRepository;
+import nl.lhdev.lhcommerce.dto.ProductDTO;
+import nl.lhdev.lhcommerce.services.ProductService;
 
 @RestController
 @RequestMapping(value ="/products")
 public class ProductController {
 
-    private ProductRepository repository;
-    public ProductController(ProductRepository repository) {
-        this.repository = repository;
-    }
-
-    @GetMapping
-    public String teste() {
-        Optional<Product> result = repository.findById(1L);
-        Product product = result.get();
-        return product.getName();
+    @Autowired
+    private ProductService service;
+    
+    @GetMapping(value="/{id}")
+    public ProductDTO findById(@PathVariable Long id) {
+        return service.findById(id);
     }
 
     

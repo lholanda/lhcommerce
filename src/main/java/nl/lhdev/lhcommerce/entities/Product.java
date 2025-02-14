@@ -84,9 +84,6 @@ public class Product {
         this.imgUrl = imgUrl;
     }
 
-    public Set<Category> getCategories() {
-        return categories;
-    }
 
 
 

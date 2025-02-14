@@ -1,5 +1,7 @@
 package nl.lhdev.lhcommerce.dto;
 
+import nl.lhdev.lhcommerce.entities.Product;
+
 public class ProductDTO {
 
     private Long id;
@@ -18,6 +20,17 @@ public class ProductDTO {
         this.price = price;
         this.imgUrl = imgUrl;
     }
+
+    // sobrecarga
+    public ProductDTO(Product entity) {
+        id = entity.getId();
+        name = entity.getName();
+        description = entity.getDescription();
+        price = entity.getPrice();
+        imgUrl = entity.getImgUrl();
+    }
+
+
 
     public Long getId() {
         return id;

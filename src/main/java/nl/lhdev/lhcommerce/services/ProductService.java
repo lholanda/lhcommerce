@@ -1,5 +1,9 @@
 package nl.lhdev.lhcommerce.services;
 
+import java.util.List;
+
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -27,5 +31,21 @@ public class ProductService {
         Product product = repository.findById(id).get();
 
         return converterDto.fromEntity(product);
+    }
+
+    @Transactional(readOnly = true)  // lock de leitura para nao lock no banco
+    public Page<ProductDTO> findAll(Pageable pageable) {
+
+        Page<Product> products = repository.findAll(pageable);
+
+        return products.map(p -> converterDto.fromEntity(p));
+    }
+
+    @Transactional(readOnly = true)  // lock de leitura para nao lock no banco
+    public List<ProductDTO> noPageFindAll() {
+
+        List<Product> products = repository.findAll();
+
+        return products.stream().map(p -> converterDto.fromEntity(p)).toList();
     }
 }

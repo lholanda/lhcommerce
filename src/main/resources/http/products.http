@@ -1,7 +1,20 @@
 ###
 GET http://localhost:8080/products/9
 
-// http GET :8080/products
+// http GET :8080/products/9
+
+
+###
+GET http://localhost:8080/products?size=12&page=0&sort=name,desc
+
+// httpe nao esta funcionado....
+// http GET :8080/products?size=2&page=0&sort=name
+
+###
+GET http://localhost:8080/products/no-pageable
+
+// http GET :8080/products/no-pageable
+
 
 ###
 POST http://localhost:8080/products

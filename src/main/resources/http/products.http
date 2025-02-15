@@ -1,5 +1,5 @@
 ###
-GET http://localhost:8080/products/27
+GET http://localhost:8080/products/4
 
 // http GET :8080/products/9
 
@@ -28,3 +28,17 @@ Content-Type:  application/json
 }
 
 // COM O HTTPIE -> http POST :4000/auth/login
+
+###
+PUT http://localhost:8080/products/4
+Content-Type:  application/json
+
+{
+    "name": "4$$$$$$$$$44444",
+    "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui ad, adipisci illum ipsam velit et odit eaque reprehenderit ex maxime delectus dolore labore, quisquam quae tempora natus esse aliquam veniam doloremque quam minima culpa alias maiores commodi. Perferendis enim",
+    "imgUrl": "https://raw.githubusercontent.com/devsuperior/dscatalog-resources/master/backend/img/1-big.jpg",
+    "price": 250.0
+}
+
+###
+DELETE http://localhost:8080/products/4

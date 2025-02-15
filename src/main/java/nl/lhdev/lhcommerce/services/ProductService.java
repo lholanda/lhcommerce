@@ -41,6 +41,19 @@ public class ProductService {
         return products.map(p -> converterDto.fromEntity(p));
     }
 
+
+    @Transactional
+    public ProductDTO insert(ProductDTO dto) {
+
+        Product entity = converterDto.toEntity(dto);
+        entity = repository.save(entity);
+
+        return converterDto.fromEntity(entity);
+    }
+
+
+
+    // Lista nao paginada
     @Transactional(readOnly = true)  // lock de leitura para nao lock no banco
     public List<ProductDTO> noPageFindAll() {
 

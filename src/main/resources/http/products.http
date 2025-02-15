@@ -1,5 +1,5 @@
 ###
-GET http://localhost:8080/products/9
+GET http://localhost:8080/products/27
 
 // http GET :8080/products/9
 
@@ -21,8 +21,10 @@ POST http://localhost:8080/products
 Content-Type:  application/json
 
 {
-  "email": "funcionario_1@email.com",
-  "senha": "123456"
+    "name": "Meu novo produto",
+    "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui ad, adipisci illum ipsam velit et odit eaque reprehenderit ex maxime delectus dolore labore, quisquam quae tempora natus esse aliquam veniam doloremque quam minima culpa alias maiores commodi. Perferendis enim",
+    "imgUrl": "https://raw.githubusercontent.com/devsuperior/dscatalog-resources/master/backend/img/1-big.jpg",
+    "price": 200.0
 }
 
 // COM O HTTPIE -> http POST :4000/auth/login

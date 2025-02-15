@@ -20,7 +20,13 @@ public class ConverterDTO {
     }
 
     public Product toEntity(ProductDTO dto){
-        return null;
+        return new Product(
+                   null, 
+                   dto.getName(),
+                   dto.getDescription(), 
+                   dto.getPrice(), 
+                   dto.getImgUrl()
+                );
     }
     
 }

@@ -25,12 +25,14 @@ import nl.lhdev.lhcommerce.services.ProductService;
 public class ProductController {
 
     @Autowired
-    private ProductService service;
+    private ProductService service; // posso fazer a injecao por constructor tambem
     
+    // Pesquisa por Id - findbyId
+
     @GetMapping(value="/{id}")
     public ResponseEntity<ProductDTO> findById(@PathVariable Long id) {
         ProductDTO dto = service.findById(id);
-        return ResponseEntity.ok(dto);
+        return ResponseEntity.ok(dto);                
     }
       
     @GetMapping
@@ -61,7 +63,7 @@ public class ProductController {
     
     @DeleteMapping(value="/{id}")
     public ResponseEntity<Void> deleteById(@PathVariable Long id) {
-       service.deleteById(id);
+       service.delete(id);
        return ResponseEntity.noContent().build();
     }
 
@@ -73,3 +75,26 @@ public class ProductController {
     }
   
 }
+
+/*
+    @GetMapping(value="/{id}")
+    public ResponseEntity<ProductDTO> findById(@PathVariable Long id) {
+        ProductDTO dto = service.findById(id);
+        return ResponseEntity.ok(dto);              
+    }
+ */
+
+ /*
+    // fazer um try catch no controlador para testar
+    @GetMapping(value="/{id}")
+    public ResponseEntity<?> findById(@PathVariable Long id) {
+        try {
+            ProductDTO dto = service.findById(id);
+            return ResponseEntity.ok(dto);              
+        } catch (ResourceNotFoundException e) {
+            CustomError err = new CustomError(Instant.now(), 404, e.getMessage(), "caminho" );
+            return ResponseEntity.status(404).body(err);
+        
+        }
+    }
+  */

@@ -1,5 +1,5 @@
 ###
-GET http://localhost:8080/products/4
+GET http://localhost:8080/products/100
 
 // http GET :8080/products/9
 
@@ -30,7 +30,7 @@ Content-Type:  application/json
 // COM O HTTPIE -> http POST :4000/auth/login
 
 ###
-PUT http://localhost:8080/products/4
+PUT http://localhost:8080/products/100
 Content-Type:  application/json
 
 {
@@ -41,4 +41,4 @@ Content-Type:  application/json
 }
 
 ###
-DELETE http://localhost:8080/products/4
+DELETE http://localhost:8080/products/1

@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import jakarta.validation.Valid;
 import nl.lhdev.lhcommerce.dto.ProductDTO;
 import nl.lhdev.lhcommerce.services.ProductService;
 
@@ -41,8 +42,10 @@ public class ProductController {
         return ResponseEntity.ok(pageDTO);
     }
 
+
+    // :: INSERIR ::
     @PostMapping
-    public ResponseEntity<ProductDTO> insert(@RequestBody ProductDTO dto) {
+    public ResponseEntity<ProductDTO> insert(@Valid @RequestBody ProductDTO dto) {
         dto = service.insert(dto);
         // qdo cria um recurso na resposta, alem de dar o codigo created (201), vai dar o link do recurso criado - no header 
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}")
@@ -53,7 +56,7 @@ public class ProductController {
     }
 
     @PutMapping(value="/{id}")
-    public ResponseEntity<ProductDTO> update(@PathVariable Long id, @RequestBody ProductDTO dto) {
+    public ResponseEntity<ProductDTO> update(@PathVariable Long id, @Valid @RequestBody ProductDTO dto) {
         dto = service.update(id, dto);
         return ResponseEntity.ok(dto);
     }

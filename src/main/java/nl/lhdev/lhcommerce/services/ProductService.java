@@ -1,7 +1,6 @@
 package nl.lhdev.lhcommerce.services;
 
 import java.util.List;
-import java.util.NoSuchElementException;
 
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.data.domain.Page;
@@ -97,6 +96,8 @@ public class ProductService {
     }
 }
 
+
+// https://jakarta.ee/learn/docs/jakartaee-tutorial/current/beanvalidation/bean-validation/bean-validation.html
 
 /*
 

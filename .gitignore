@@ -33,5 +33,5 @@ build/
 .vscode/
 
 ### temp file for studies ###
-./temp.MD
-!**/src/main/resources/**/http/
+temp.MD
+/src/main/resources/http/

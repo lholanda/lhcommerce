@@ -97,6 +97,7 @@ public class ProductService {
 }
 
 
+// https://www.baeldung.com/spring-boot-bean-validation
 // https://jakarta.ee/learn/docs/jakartaee-tutorial/current/beanvalidation/bean-validation/bean-validation.html
 
 /*

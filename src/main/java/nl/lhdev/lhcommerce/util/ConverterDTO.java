@@ -9,7 +9,7 @@ import nl.lhdev.lhcommerce.entities.Product;
 public class ConverterDTO {
 
     public ProductDTO fromEntity(Product entity){
-        System.out.println("convertendo from Product to ProductDTO");
+        //System.out.println("convertendo from Product to ProductDTO");
         return new ProductDTO(
                    entity.getId(), 
                    entity.getName(),

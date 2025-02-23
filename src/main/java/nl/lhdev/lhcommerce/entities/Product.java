@@ -53,6 +53,10 @@ public class Product {
         this.price = price;
         this.imgUrl = imgUrl;
     }
+
+
+
+    
     public Long getId() {
         return id;
     }
